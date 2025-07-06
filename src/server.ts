@@ -3,12 +3,12 @@ import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
 import swaggerUi from 'swagger-ui-express';
-import { specs } from '../src/config/swagger';
+import { specs } from './config/swagger';
 
-import { config } from '../src/config/env';
-import { logger } from '../src/utils/logger';
-import { errorHandler, notFoundHandler } from '../src/middleware/error.middleware';
-import routes from '../src/routes/index';
+import { config } from './config/env';
+import { logger } from './utils/logger';
+import { errorHandler, notFoundHandler } from './middleware/error.middleware';
+import routes from './routes/index';  
 import { connectDatabase } from './config/database';
 
 const app: Application = express();

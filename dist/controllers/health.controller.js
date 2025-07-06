@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HealthController = void 0;
-const health_service_1 = require("@services/health.service");
+const health_service_1 = require("../services/health.service");
 class HealthController {
     constructor() {
         this.checkHealth = async (_req, res) => {

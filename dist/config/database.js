@@ -4,11 +4,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.connectDatabase = void 0;
+const logger_1 = require("../utils/logger");
 const mongoose_1 = __importDefault(require("mongoose"));
-const logger_1 = require("@utils/logger");
 const connectDatabase = async () => {
     try {
-        const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/powerbox';
+        const mongoUri = process.env.MONGODB_URI ?? 'mongodb://localhost:27017/powerbox';
         await mongoose_1.default.connect(mongoUri);
         logger_1.logger.info('MongoDB connected successfully');
         mongoose_1.default.connection.on('error', (error) => {
