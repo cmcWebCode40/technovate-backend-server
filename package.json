@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc --listEmittedFiles",
+    "build": "npm run clean && tsc",
     "postbuild": "ls -la dist && ls -la dist/routes",
     "start": "node -r tsconfig-paths/register dist/server.js",
     "dev": "nodemon"
