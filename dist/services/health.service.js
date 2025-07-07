@@ -20,4 +20,3 @@ class HealthService {
     }
 }
 exports.HealthService = HealthService;
-//# sourceMappingURL=health.service.js.map

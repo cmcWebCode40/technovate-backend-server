@@ -33,4 +33,3 @@ const notFoundHandler = (_req, res) => {
     });
 };
 exports.notFoundHandler = notFoundHandler;
-//# sourceMappingURL=error.middleware.js.map

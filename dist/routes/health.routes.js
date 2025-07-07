@@ -6,4 +6,3 @@ const router = (0, express_1.Router)();
 const healthController = new health_controller_1.HealthController();
 router.get('/health', healthController.checkHealth);
 exports.default = router;
-//# sourceMappingURL=health.routes.js.map

@@ -18,4 +18,3 @@ exports.config = {
     isDevelopment: process.env.NODE_ENV === 'development',
     isProduction: process.env.NODE_ENV === 'production',
 };
-//# sourceMappingURL=env.js.map

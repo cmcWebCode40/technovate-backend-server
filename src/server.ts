@@ -2,8 +2,8 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
-// import swaggerUi from 'swagger-ui-express';
-// import { specs } from './config/swagger';
+import swaggerUi from 'swagger-ui-express';
+import { specs } from './config/swagger';
 
 import { config } from './config/env';
 import { logger } from './utils/logger';
@@ -18,7 +18,7 @@ app.use(cors());
 app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use('/api', routes);
 

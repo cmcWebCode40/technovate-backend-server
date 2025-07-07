@@ -12,4 +12,3 @@ class HealthController {
     }
 }
 exports.HealthController = HealthController;
-//# sourceMappingURL=health.controller.js.map

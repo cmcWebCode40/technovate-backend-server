@@ -4,12 +4,11 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "nodemon",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc --listEmittedFiles",
+    "postbuild": "ls -la dist && ls -la dist/routes",
+    "start": "node -r tsconfig-paths/register dist/server.js",
+    "dev": "nodemon"
   },
   "keywords": [
     "nodejs",
@@ -33,6 +32,7 @@
     "nodemailer": "^7.0.4",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
+    "tsconfig-paths": "^4.2.0",
     "zod": "^3.25.74"
   },
   "devDependencies": {

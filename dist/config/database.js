@@ -24,4 +24,3 @@ const connectDatabase = async () => {
     }
 };
 exports.connectDatabase = connectDatabase;
-//# sourceMappingURL=database.js.map

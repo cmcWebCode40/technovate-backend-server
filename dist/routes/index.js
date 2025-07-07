@@ -10,4 +10,3 @@ const router = (0, express_1.Router)();
 router.use('/', health_routes_1.default);
 router.use('/auth', auth_routes_1.default);
 exports.default = router;
-//# sourceMappingURL=index.js.map
